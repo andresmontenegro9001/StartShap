@@ -1,5 +1,8 @@
 .gradle
 /build/
+gradle
+history
+target
 
 # Ignore Gradle GUI config
 gradle-app.setting
