@@ -9,10 +9,19 @@
      When  he submits username and password
      Then  he access and observes title "Dashboard"
 
-   Scenario: The user add new order
+   Scenario Outline: The user add new order
      Given Need add order
      When  fill data form
+     When  fill data form general
+       | customer   | orderDate   | requiredDate   | employee   | product   | unitPrice   | quantity   | discount   |
+       | <customer> | <orderDate> | <requiredDate> | <employee> | <product> | <unitPrice> | <quantity> | <discount> |
      Then  see the register
+     Examples:
+       | customer                | orderDate  | requiredDate | employee        | product      | unitPrice | quantity | discount |
+       | Antonio Moreno Taquería | 09/26/2022 | 09/30/2022   | Steven Buchanan | Gula Malacca | 19.45     | 1        | 0.00     |
+
+
+
 
 
 

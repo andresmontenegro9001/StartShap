@@ -7,6 +7,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Click;
 
+import java.util.List;
+import java.util.Map;
+
 import static co.com.choucair.automation.startshap.userinterface.DashboardPage.LINK_ORDERS;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -22,7 +25,12 @@ public class OrderStepDefinitions {
 
     @When("fill data form")
     public void fillDataForm() {
-        theActorInTheSpotlight().attemptsTo(AddOrder.fill());
+        //theActorInTheSpotlight().attemptsTo(AddOrder.fill());
+    }
+
+    @When("fill data form general")
+    public void fillDataFormGeneral(List<Map<String, String>> params) {
+        theActorInTheSpotlight().attemptsTo(AddOrder.fill(params));
     }
 
     @Then("see the register")
