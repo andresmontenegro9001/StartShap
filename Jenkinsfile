@@ -7,7 +7,7 @@ pipeline {
         stage('Sonar Execution') {
             steps {
                 echo "hola"
-                sh "gradle clean"
+                bat "gradle clean"
             }
         }
     }
