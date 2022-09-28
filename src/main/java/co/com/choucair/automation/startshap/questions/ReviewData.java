@@ -8,6 +8,10 @@ import static co.com.choucair.automation.startshap.userinterface.DashboardPage.O
 
 public class ReviewData {
 
+    private ReviewData() {
+        throw new IllegalStateException("ReviewData class");
+    }
+
     public static Question<String> dashboardTitle(){
         return actor -> Text.of(DASHBOARD_TITLE).viewedBy(actor).asString();
     }
