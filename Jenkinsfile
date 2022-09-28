@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Install Dependencies') {
+        stage('Sonar Execution') {
             steps {
-                sh 'echo "holii"'
+                echo "hola"
             }
         }
     }
