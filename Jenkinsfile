@@ -6,8 +6,12 @@ pipeline {
     stages {
         stage('Sonar Execution') {
             steps {
-                echo "hola"
-                bat "gradle clean"
+                bat "gradle clean sonarqube"
+            }
+        }
+        stage('Test') {
+            steps {
+                bat "gradle clean test --tests co/com/choucair/automation/startshap/runners"
             }
         }
     }
