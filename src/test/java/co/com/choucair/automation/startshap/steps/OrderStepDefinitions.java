@@ -1,7 +1,8 @@
 package co.com.choucair.automation.startshap.steps;
 
 import co.com.choucair.automation.startshap.questions.ReviewData;
-import co.com.choucair.automation.startshap.task.AddOrder;
+import co.com.choucair.automation.startshap.task.AddBasicOrder;
+import co.com.choucair.automation.startshap.task.AddDetailOrder;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,18 +24,18 @@ public class OrderStepDefinitions {
         theActorInTheSpotlight().should(seeThat(ReviewData.ordersTitle(),equalTo("Orders")));
     }
 
-    @When("fill data form")
-    public void fillDataForm() {
-        //theActorInTheSpotlight().attemptsTo(AddOrder.fill());
-    }
-
     @When("fill data form general")
     public void fillDataFormGeneral(List<Map<String, String>> params) {
-        theActorInTheSpotlight().attemptsTo(AddOrder.fill(params));
+        theActorInTheSpotlight().attemptsTo(AddBasicOrder.fill(params));
     }
 
-    @Then("see the register")
-    public void seeTheRegister() {
+    @When("fill order detail")
+    public void fillOrderDetail(List<Map<String, String>> params) {
+        theActorInTheSpotlight().attemptsTo(AddDetailOrder.fill(params));
+    }
+
+    @Then("see the register created")
+    public void seeTheRegisterCreated() {
 
     }
 

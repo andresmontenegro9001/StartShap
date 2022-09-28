@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         glue = "co/com/choucair/automation/startshap/steps",
-        features = "src/test/resources/features/order.feature",
+        features = "src/test/resources/features/add_order.feature",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         monochrome = true
 )
