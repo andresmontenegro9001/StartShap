@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "gradle clean test --tests co/com/choucair/automation/startshap/runners"
+                bat "gradle clean test --tests src/test/java/co/com/choucair/automation/startshap/runners"
             }
         }
     }
