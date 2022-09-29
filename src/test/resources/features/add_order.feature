@@ -18,5 +18,7 @@ Feature: Orden de compra
       | <product> | <unitPrice> | <quantity> | <discount> |
     Then  see the register created
     Examples:
-      | customer                | orderDate  | requiredDate | employee        | product      | unitPrice | quantity | discount |
-      | Antonio Moreno Taquería | 09/26/2022 | 09/30/2022   | Steven Buchanan | Gula Malacca | 19.45     | 1        | 0.00     |
+      | customer                    | orderDate  | requiredDate | employee        | product      | unitPrice | quantity | discount |
+      | Antonio Moreno Taquería     | 09/28/2022 | 10/02/2022   | Steven Buchanan | Gula Malacca | 19.45     | 1        | 0.00     |
+      | Gourmet Lanchonetes [GOURL] | 09/28/2022 | 10/02/2022   | Nancy Davolio   | Chai         | 18.00     | 1        | 0.00     |
+      | LILA-Supermercado [LILAS]   | 09/28/2022 | 10/02/2022   | Robert King     | Ikura        | 31.00     | 1        | 0.00     |
